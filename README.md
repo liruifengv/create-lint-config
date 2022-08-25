@@ -1,0 +1,1 @@
+# create-lint-config

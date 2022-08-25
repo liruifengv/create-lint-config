@@ -1,0 +1,40 @@
+{
+  "name": "create-lint-config",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "bin/index.js",
+  "bin": {
+    "create-lint-config": "bin/index.js"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liruifengv/create-lint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "stylelint",
+    "commitlint",
+    "husky",
+    "config"
+  ],
+  "author": "liruifengv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liruifengv/create-lint-config/issues"
+  },
+  "homepage": "https://github.com/liruifengv/create-lint-config#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "kolorist": "^1.5.1",
+    "prompts": "^2.4.2"
+  }
+}
