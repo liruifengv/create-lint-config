@@ -1,16 +1,19 @@
 {
   "name": "create-lint-config",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.3",
+  "description": "An easy way to create all lint configuration",
   "type": "module",
-  "main": "bin/index.js",
   "bin": {
-    "create-lint-config": "bin/index.js"
+    "create-lint-config": "outfile.cjs"
   },
+  "files": [
+    "outfile.cjs"
+  ],
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
   "scripts": {
+    "build": "node ./scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,7 +36,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
+  "devDependencies": {
+    "esbuild": "^0.15.5",
     "kolorist": "^1.5.1",
     "prompts": "^2.4.2"
   }
