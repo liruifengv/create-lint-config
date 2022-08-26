@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": [],
+    "types": ["node"],
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": ["index.ts"],
+}
