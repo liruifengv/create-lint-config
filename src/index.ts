@@ -6,7 +6,7 @@ import { color, label } from '@astrojs/cli-kit';
 
 async function init () {
   if (!fs.existsSync('./package.json')) {
-    throw new Error(red("✖") + " package.json not found");
+    throw new Error(color.red("✖") + " package.json not found");
   }
   console.log(`Welcome to use ${label('create-lint-config!', color.bgGreen, color.black)}`)
   const __dirname = path.resolve()
