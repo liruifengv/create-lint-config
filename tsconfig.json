@@ -9,5 +9,5 @@
     "module": "ESNext",
     "allowSyntheticDefaultImports": true,
   },
-  "include": ["index.ts"],
+  "include": ["src/index.ts"],
 }
