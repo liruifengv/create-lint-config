@@ -1,6 +1,6 @@
 {
   "name": "create-lint-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An easy way to create all lint configuration",
   "type": "module",
   "bin": {
@@ -15,7 +15,10 @@
   },
   "scripts": {
     "build": "node ./scripts/build.js",
-    "lint": "eslint src/* --fix"
+    "lint": "eslint --cache . --fix",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": {
     "type": "git",
@@ -47,6 +50,7 @@
     "eslint-plugin-promise": "^6.0.0"
   },
   "dependencies": {
-    "@astrojs/cli-kit": "^0.2.3"
+    "@astrojs/cli-kit": "^0.2.3",
+    "@changesets/cli": "^2.26.0"
   }
 }
