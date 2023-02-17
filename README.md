@@ -12,7 +12,7 @@ A particularly large number of config files distracted us. Our goal is to genera
 ## Usage
 
 ```bash
-npm create lint-config -g
+npm create lint-config@latest -g
 ```
 ## Features
 
