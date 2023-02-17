@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "node ./scripts/build.js",
-    "lint": "eslint --cache . --fix",
+    "lint": "eslint src/* --fix",
+    "lint:ci": "eslint src/*",
     "changeset": "changeset",
     "version": "changeset version && pnpm install",
     "preinstall": "npx only-allow pnpm"

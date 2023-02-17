@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint --cache . --fix"
+    "lint": "eslint src/* --fix"
   },
   "devDependencies": {
     "eslint": "^8.0.1",

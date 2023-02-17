@@ -2,11 +2,11 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import deepMerge from '../utils/deepMerge'
-import { color, label } from '@astrojs/cli-kit';
+import { color, label } from '@astrojs/cli-kit'
 
 async function init () {
   if (!fs.existsSync('./package.json')) {
-    throw new Error(color.red("✖") + " package.json not found");
+    throw new Error(color.red('✖') + ' package.json not found')
   }
   console.log(`Welcome to use ${label('create-lint-config!', color.bgGreen, color.black)}`)
   const __dirname = path.resolve()
@@ -29,10 +29,10 @@ async function init () {
   }
   console.log('Eslint config Done!')
 
-  console.log(`\nNow run:\n`);
-  console.log(`  ${color.bold(color.green("npm install"))}`);
-  console.log(`  ${color.bold(color.green("npm run lint"))}`);
-  console.log();
+  console.log('\nNow run:\n')
+  console.log(`  ${color.bold(color.green('npm install'))}`)
+  console.log(`  ${color.bold(color.green('npm run lint'))}`)
+  console.log()
 }
 
 init().catch((e) => {
