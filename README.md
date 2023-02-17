@@ -1,5 +1,11 @@
 # create-lint-config
+![version](https://img.shields.io/npm/v/create-lint-config)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/liruifengv/create-lint-config/pulls)
+![license](https://img.shields.io/npm/l/create-lint-config)
+![npm total downloads](https://img.shields.io/npm/dt/create-lint-config.svg)
+![npm month downloads](https://img.shields.io/npm/dm/create-lint-config.svg)
+![downloads](https://img.shields.io/npm/dw/create-lint-config)
+
 An easy way to create all lint configuration.
 
 A particularly large number of config files distracted us. Our goal is to generate these configurations quickly and easily!
