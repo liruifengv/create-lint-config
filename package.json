@@ -1,6 +1,6 @@
 {
   "name": "create-lint-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An easy way to create all lint configuration",
   "type": "module",
   "bin": {
