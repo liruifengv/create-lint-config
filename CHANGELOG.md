@@ -1,5 +1,12 @@
 # create-lint-config
 
+## 0.0.6
+
+### Patch Changes
+
+- chore: remove only-pnpm
+- fix: fix `lint` srcipt
+
 ## 0.0.5
 
 ### Patch Changes
