@@ -1,5 +1,11 @@
 # create-lint-config
 
+## 0.0.7
+
+### Patch Changes
+
+- 5fd4564: Generate stylelint config
+
 ## 0.0.6
 
 ### Patch Changes
