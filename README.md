@@ -18,7 +18,7 @@ npm create lint-config@latest
 
 - [x] Generate eslint config.
 - [ ] Generate prettier config.
-- [ ] Generate stylelint config.
+- [x] Generate stylelint config.
 - [ ] Generate husky config.
 - [ ] Generate commitlint config.
 - [ ] And more.
