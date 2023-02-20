@@ -1,5 +1,19 @@
 # create-lint-config
 
+## 0.1.0
+
+### Minor Changes
+
+- 04444cb: Install dependencies auto
+- 04444cb: Generate prettier、stylelint、commitlint config.
+- 04444cb: A more beautiful interface
+
+### Patch Changes
+
+- 04444cb: Generate prettier config
+- 04444cb: fix template not found
+- 04444cb: Update README.
+
 ## 0.0.7
 
 ### Patch Changes
