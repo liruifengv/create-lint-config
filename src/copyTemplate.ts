@@ -4,8 +4,8 @@ import * as path from 'node:path'
 import deepMerge from '../utils/deepMerge'
 
 export function copy(templateName: string) {
-  const cwd = process.cwd();
-  const root = path.join(cwd, './');
+  const cwd = process.cwd()
+  const root = path.join(cwd, './')
   const templateRoot = path.resolve(__dirname, '../template')
   const eslintTemplate = path.resolve(templateRoot, templateName)
   const files = fs.readdirSync(eslintTemplate)
