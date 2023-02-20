@@ -4,7 +4,6 @@ import * as path from 'node:path'
 import deepMerge from '../utils/deepMerge'
 
 export function copy(templateName: string) {
-  console.log(`Init ${templateName} config...`)
   const cwd = process.cwd();
   const root = path.join(cwd, './');
   const templateRoot = path.resolve(__dirname, '../template')
@@ -22,5 +21,4 @@ export function copy(templateName: string) {
       fs.copyFileSync(path.join(eslintTemplate, file), targetPath)
     }
   }
-  console.log(`${templateName} config Done!`)
 }
