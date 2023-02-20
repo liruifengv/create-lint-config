@@ -3,7 +3,7 @@ import * as fs from 'node:fs'
 import { color, label } from '@astrojs/cli-kit'
 import { copy } from './copyTemplate'
 
-async function init () {
+async function init() {
   if (!fs.existsSync('./package.json')) {
     throw new Error(color.red('✖') + ' package.json not found')
   }

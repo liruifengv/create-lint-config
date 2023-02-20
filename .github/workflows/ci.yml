@@ -2,9 +2,9 @@ name: ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-     branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -25,9 +25,9 @@ jobs:
 
       - name: Install Deps
         run: pnpm i
-      
-#       - name: Format
-#         run: pnpm run format
+
+      # - name: Format
+      # run: pnpm run format
 
       - name: Lint
         run: pnpm run lint:ci
