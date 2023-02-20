@@ -33,27 +33,13 @@ async function init() {
   })
 
   await spinner({
-    start: `Dependencies installing with npm...`,
-    end: 'Dependencies installed',
-    while: () =>
-      install({
-        cwd: process.cwd(),
-        pkgManager: 'npm',
-        _arguments: ['install'],
-      }).catch((e) => {
-        error('error', e)
-        process.exit(1)
-      }),
-  })
-
-  await spinner({
     start: `Husky installing...`,
     end: 'Husky installed',
     while: () =>
       install({
         cwd: process.cwd(),
-        pkgManager: 'npm',
-        _arguments: ['install'],
+        pkgManager: 'npx',
+        _arguments: ['husky', 'install'],
       }).catch((e) => {
         error('error', e)
         process.exit(1)
@@ -87,6 +73,21 @@ async function init() {
         process.exit(1)
       }),
   })
+
+  await spinner({
+    start: `Dependencies installing with npm...`,
+    end: 'Dependencies installed',
+    while: () =>
+      install({
+        cwd: process.cwd(),
+        pkgManager: 'npm',
+        _arguments: ['install'],
+      }).catch((e) => {
+        error('error', e)
+        process.exit(1)
+      }),
+  })
+
   console.log(title('Success!'))
   console.log("\n You can delete any file or script you don't need. \n")
   console.log(title('Now run'))
