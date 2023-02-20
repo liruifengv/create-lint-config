@@ -7,7 +7,7 @@
 ![npm month downloads](https://img.shields.io/npm/dm/create-lint-config.svg)
 ![downloads](https://img.shields.io/npm/dw/create-lint-config)
 
-[English]((./README.md)) | 简体中文
+[English](<(./README.md)>) | 简体中文
 
 ### 一个一键创建所有的 lint 配置的 CLI 命令行工具。
 
@@ -58,4 +58,4 @@ pnpm create lint-config@latest
 
 ## 开源协议
 
-create-lint-config  使用 MIT 协议发布。在 [LICENSE](./LICENSE) 文件查看详情。
+create-lint-config 使用 MIT 协议发布。在 [LICENSE](./LICENSE) 文件查看详情。
