@@ -8,14 +8,15 @@ async function init() {
     throw new Error(color.red('✖') + ' package.json not found')
   }
   console.log(`Welcome to use ${label('create-lint-config!', color.bgGreen, color.black)}`)
-  // eslint
-  copy('eslint-base')
-  copy('stylelint-base')
+  // base template
+  copy('base')
 
   console.log('\nNow run:\n')
   console.log(`  ${color.bold(color.green('npm install'))}`)
   console.log(`  ${color.bold(color.green('npm run lint'))}`)
+  console.log(`  ${color.bold(color.green('npm run format'))}`)
   console.log(`  ${color.bold(color.green('npm run style'))}`)
+  console.log('\n You can delete any file or script you don\'t need. \n')
   console.log()
 }
 
