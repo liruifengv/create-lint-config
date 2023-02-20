@@ -6,5 +6,5 @@ await esbuild.build({
   outfile: 'dist/create-lint-config.cjs',
   format: 'cjs',
   platform: 'node',
-  target: 'node14'
+  target: 'node14',
 })

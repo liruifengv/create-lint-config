@@ -7,7 +7,7 @@
     "target": "ESNext",
     "moduleResolution": "Node",
     "module": "ESNext",
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/index.ts"],
+  "include": ["src/index.ts"]
 }

@@ -17,6 +17,8 @@
     "build": "node ./scripts/build.js",
     "lint": "eslint src/* --fix",
     "lint:ci": "eslint src/*",
+    "format": "prettier --write .",
+    "format:ci": "prettier --check  .",
     "changeset": "changeset",
     "version": "changeset version && pnpm install"
   },
@@ -41,16 +43,23 @@
     "access": "public"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
     "esbuild": "^0.17.8",
     "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "@changesets/cli": "^2.26.0"
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@astrojs/cli-kit": "^0.2.3"
+    "@astrojs/cli-kit": "^0.2.3",
+    "execa": "^7.0.0"
   }
 }
