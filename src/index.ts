@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 import * as fs from 'node:fs'
 import { copy } from './copyTemplate'
-import { execa } from 'execa'
 import { color, label } from '@astrojs/cli-kit'
 import { error, info, spinner, title } from './messages'
-import { help } from './actions/help';
-import arg from 'arg';
-
-async function install({ pkgManager, cwd, _arguments }: { pkgManager: string; cwd: string; arguments: array }) {
-  const installExec = execa(pkgManager, _arguments, { cwd })
-  return new Promise<void>((resolve, reject) => {
-    installExec.on('error', (e) => reject(e))
-    installExec.on('close', () => resolve())
-  })
-}
+import {
+  help,
+  eslint,
+  prettier,
+  commitlint,
+  stylelint,
+  husky,
+  installHusky,
+  dependencies,
+  installDependencies,
+  success,
+  getContext,
+} from './actions'
 
 async function init() {
   if (!fs.existsSync('./package.json')) {
@@ -21,42 +23,30 @@ async function init() {
   }
   console.log(`Welcome to use ${label('create-lint-config!', color.bgGreen, color.black)}`)
 
-	const cleanArgv = process.argv.slice(2).filter((arg) => arg !== '--');
+  const cleanArgv = process.argv.slice(2).filter((arg) => arg !== '--')
 
-  const flags = arg(
-		{
-			'--template': String,
-			'--input': Boolean,
-			'--help': Boolean,
+  const ctx = getContext(cleanArgv)
 
-			'-i': '--input',
-			'-h': '--help',
-		},
-		{ argv: cleanArgv, permissive: true }
-	)
-
-  const {
-		'--help': showHelp = false,
-		'--template': template,
-		'--input': input = false,
-	} = flags
-
-  if(showHelp) {
+  if (ctx.help) {
     help()
-		return
+    return
   }
 
-  if(template) {
+  if (ctx.template) {
     info('TODO', 'Template is coming soon!')
-		return
-  }
-
-  if(input) {
-    console.log(title('Starting!'))
-		return
+    return
   }
 
   console.log(title('Starting!'))
+  if (ctx.input) {
+    const steps = [eslint, prettier, commitlint, stylelint, husky, dependencies]
+    for (const step of steps) {
+      await step(ctx.input)
+    }
+    success()
+    return
+  }
+
   await spinner({
     start: `Base template copying...`,
     end: 'Template copied',
@@ -70,68 +60,11 @@ async function init() {
     },
   })
 
-  await spinner({
-    start: `Husky installing...`,
-    end: 'Husky installed',
-    while: () =>
-      install({
-        cwd: process.cwd(),
-        pkgManager: 'npx',
-        _arguments: ['husky', 'install'],
-      }).catch((e) => {
-        error('error', e)
-        process.exit(1)
-      }),
-  })
+  await installHusky()
 
-  await spinner({
-    start: `Adding commit-msg lint...`,
-    end: 'Commit-msg lint added',
-    while: () =>
-      install({
-        cwd: process.cwd(),
-        pkgManager: 'npx',
-        _arguments: ['husky', 'add', '.husky/commit-msg', 'npx --no-install commitlint --edit ""'],
-      }).catch((e) => {
-        error('error', e)
-        process.exit(1)
-      }),
-  })
+  await installDependencies()
 
-  await spinner({
-    start: `Adding lint-staged...`,
-    end: 'Lint-staged added',
-    while: () =>
-      install({
-        cwd: process.cwd(),
-        pkgManager: 'npx',
-        _arguments: ['husky', 'add', '.husky/pre-commit', 'npx lint-staged'],
-      }).catch((e) => {
-        error('error', e)
-        process.exit(1)
-      }),
-  })
-
-  await spinner({
-    start: `Dependencies installing with npm...`,
-    end: 'Dependencies installed',
-    while: () =>
-      install({
-        cwd: process.cwd(),
-        pkgManager: 'npm',
-        _arguments: ['install'],
-      }).catch((e) => {
-        error('error', e)
-        process.exit(1)
-      }),
-  })
-
-  console.log(title('Success!'))
-  console.log("\n You can delete any file or script you don't need. \n")
-  console.log(title('Now run'))
-  info('lint: ', 'npm run lint')
-  info('format: ', 'npm run format')
-  info('style: ', 'npm run style')
+  success()
 }
 
 init().catch((e) => {
