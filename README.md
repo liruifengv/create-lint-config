@@ -15,7 +15,7 @@ English | [简体中文](./README.zh-CN.md)
 
 ## Usage
 
-#### 1. Use default
+### 1. Use default
 
 We offer a shortcut method to generate all default configurations with one click, it includes Eslint, Prettier, StyleLint, CommitLint, husky, lint-staged, and many more.
 
@@ -34,7 +34,7 @@ pnpm create lint-config@latest
 
 ![screenshot](screenshot.png)
 
-#### 2. Use prompt step by step
+### 2. Use prompt step by step
 
 You can also pass the `-input / -i` flag to enable more flexible options and generate the configuration you want step by step.
 
