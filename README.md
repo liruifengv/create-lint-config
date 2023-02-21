@@ -56,11 +56,11 @@ npm create lint-config@latest -i
 
 ### CLI Flags
 
-| Name         | Description                                         |
-|:-------------|:----------------------------------------------------|
-| `--help` (`-h`) | Help info |
-| `--template <name>` | Coming soon |
-| `--input` (`-i`) | Use prompt step by step to config your wanted |
+| Name                | Description                                   |
+| :------------------ | :-------------------------------------------- |
+| `--help` (`-h`)     | Help info                                     |
+| `--template <name>` | Coming soon                                   |
+| `--input` (`-i`)    | Use prompt step by step to config your wanted |
 
 ## TODO
 

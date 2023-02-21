@@ -5,14 +5,14 @@ import { error, info, spinner, title } from '../messages'
 
 export async function stylelint(input: boolean) {
   if (input) {
-    ({ needStylelint } = await prompt({
+    const { needStylelint } = await prompt({
       name: 'needStylelint',
       type: 'confirm',
       label: title('Stylelint'),
       message: `Need Stylelint?`,
       hint: 'recommended',
       initial: true,
-    }))
+    })
     if (needStylelint) {
       await spinner({
         start: `Stylelint config generating...`,

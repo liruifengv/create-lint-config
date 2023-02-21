@@ -21,14 +21,14 @@ export async function installDependencies() {
 
 export async function dependencies(input: boolean) {
   if (input) {
-    ({ needInstall } = await prompt({
+    const { needInstall } = await prompt({
       name: 'needInstall',
       type: 'confirm',
       label: title('deps'),
       message: `Install dependencies?`,
       hint: 'recommended',
       initial: true,
-    }))
+    })
     if (needInstall) {
       await installDependencies()
     } else {

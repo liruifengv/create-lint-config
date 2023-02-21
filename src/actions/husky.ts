@@ -49,14 +49,14 @@ export async function installHusky() {
 
 export async function husky(input: boolean) {
   if (input) {
-    ({ needHusky } = await prompt({
+    const { needHusky } = await prompt({
       name: 'needHusky',
       type: 'confirm',
       label: title('husky'),
       message: `Need husky to check commit-msg and lint-staged?`,
       hint: 'recommended',
       initial: true,
-    }))
+    })
     if (needHusky) {
       await installHusky()
     } else {

@@ -5,14 +5,14 @@ import { error, info, spinner, title } from '../messages'
 
 export async function prettier(input: boolean) {
   if (input) {
-    ({ needPrettier } = await prompt({
+    const { needPrettier } = await prompt({
       name: 'needPrettier',
       type: 'confirm',
       label: title('Prettier'),
       message: `Need Prettier?`,
       hint: 'recommended',
       initial: true,
-    }))
+    })
     if (needPrettier) {
       await spinner({
         start: `Prettier config generating...`,

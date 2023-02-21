@@ -5,14 +5,14 @@ import { error, info, spinner, title } from '../messages'
 
 export async function commitlint(input: boolean) {
   if (input) {
-    ({ needCommitlint } = await prompt({
+    const { needCommitlint } = await prompt({
       name: 'needCommitlint',
       type: 'confirm',
       label: title('Commitlint'),
       message: `Need Commitlint?`,
       hint: 'recommended',
       initial: true,
-    }))
+    })
     if (needCommitlint) {
       await spinner({
         start: `Commitlint config generating...`,
