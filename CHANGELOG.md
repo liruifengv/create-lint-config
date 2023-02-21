@@ -1,5 +1,11 @@
 # create-lint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- df140b1: fix README
+
 ## 0.2.0
 
 ### Minor Changes
