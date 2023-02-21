@@ -36,7 +36,7 @@ pnpm create lint-config@latest
 
 ### 2. Use prompt step by step
 
-You can also pass the `-input / -i` flag to enable more flexible options and generate the configuration you want step by step.
+You can also pass the `--input / -i` flag to enable more flexible options and generate the configuration you want step by step.
 
 ```bash
 # npm 6.x
