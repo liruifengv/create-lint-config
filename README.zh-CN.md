@@ -39,8 +39,10 @@ pnpm create lint-config@latest
 你也可以传递`--input / -i`标志来启用更灵活的选项，一步步生成你想要的配置
 
 ```bash
-npm create lint-config@latest --input
+# npm 6.x
 npm create lint-config@latest -i
+# npm 7+, 需要传递额外的双破折号。
+npm create lint-config@latest -- -i
 ```
 
 ![screenshot-i](screenshot-i.png)

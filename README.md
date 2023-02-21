@@ -39,8 +39,10 @@ pnpm create lint-config@latest
 You can also pass the `-input / -i` flag to enable more flexible options and generate the configuration you want step by step.
 
 ```bash
-npm create lint-config@latest --input
+# npm 6.x
 npm create lint-config@latest -i
+# npm 7+, extra double-dash is needed:
+npm create lint-config@latest -- -i
 ```
 
 ![screenshot-i](screenshot-i.png)
