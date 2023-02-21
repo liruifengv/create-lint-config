@@ -15,7 +15,7 @@
 
 ## 使用
 
-#### 1. 使用默认
+### 1. 使用默认
 
 我们提供一键生成所有默认配置的快捷方法，它包含 Eslint、Prettier、StyleLint、CommitLint、husky、lint-staged 等等。
 
@@ -34,7 +34,7 @@ pnpm create lint-config@latest
 
 ![screenshot](screenshot.png)
 
-#### 2. 交互式选择
+### 2. 交互式选择
 
 你也可以传递`--input / -i`标志来启用更灵活的选项，一步步生成你想要的配置
 
