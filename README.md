@@ -15,6 +15,10 @@ English | [简体中文](./README.zh-CN.md)
 
 ## Usage
 
+#### 1. Use default
+
+We offer a shortcut method to generate all default configurations with one click, it includes Eslint, Prettier, StyleLint, CommitLint, husky, lint-staged, and many more.
+
 Execute the following command at the root of your project:
 
 ```bash
@@ -30,6 +34,17 @@ pnpm create lint-config@latest
 
 ![screenshot](screenshot.png)
 
+#### 2. Use prompt step by step
+
+You can also pass the `-input / -i` flag to enable more flexible options and generate the configuration you want step by step.
+
+```bash
+npm create lint-config@latest --input
+npm create lint-config@latest -i
+```
+
+![screenshot-i](screenshot-i.png)
+
 ## Features
 
 - [x] Generate eslint config.
@@ -39,10 +54,17 @@ pnpm create lint-config@latest
 - [x] Generate commitlint config.
 - [ ] And more.
 
+### CLI Flags
+
+| Name         | Description                                         |
+|:-------------|:----------------------------------------------------|
+| `--help` (`-h`) | Help info |
+| `--template <name>` | Coming soon |
+| `--input` (`-i`) | Use prompt step by step to config your wanted |
+
 ## TODO
 
 - Support for selecting templates by passing `-- template` flag.
-- Support for more flexible interactive options.
 
 ## ISSUE
 
