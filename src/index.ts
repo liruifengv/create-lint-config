@@ -4,6 +4,8 @@ import { copy } from './copyTemplate'
 import { execa } from 'execa'
 import { color, label } from '@astrojs/cli-kit'
 import { error, info, spinner, title } from './messages'
+import { help } from './actions/help';
+import arg from 'arg';
 
 async function install({ pkgManager, cwd, _arguments }: { pkgManager: string; cwd: string; arguments: array }) {
   const installExec = execa(pkgManager, _arguments, { cwd })
@@ -18,6 +20,42 @@ async function init() {
     throw new Error(color.red('✖') + ' package.json not found')
   }
   console.log(`Welcome to use ${label('create-lint-config!', color.bgGreen, color.black)}`)
+
+	const cleanArgv = process.argv.slice(2).filter((arg) => arg !== '--');
+
+  const flags = arg(
+		{
+			'--template': String,
+			'--input': Boolean,
+			'--help': Boolean,
+
+			'-i': '--input',
+			'-h': '--help',
+		},
+		{ argv: cleanArgv, permissive: true }
+	)
+
+  const {
+		'--help': showHelp = false,
+		'--template': template,
+		'--input': input = false,
+	} = flags
+
+  if(showHelp) {
+    help()
+		return
+  }
+
+  if(template) {
+    info('TODO', 'Template is coming soon!')
+		return
+  }
+
+  if(input) {
+    console.log(title('Starting!'))
+		return
+  }
+
   console.log(title('Starting!'))
   await spinner({
     start: `Base template copying...`,
