@@ -1,5 +1,15 @@
 # create-lint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- a43d246: template flag is working
+
+### Patch Changes
+
+- 03a22a4: add vue template
+
 ## 0.2.1
 
 ### Patch Changes
