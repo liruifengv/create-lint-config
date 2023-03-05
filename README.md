@@ -47,6 +47,32 @@ npm create lint-config@latest -- -i
 
 ![screenshot-i](screenshot-i.png)
 
+## 3. Use `--template` flag
+
+You can use templates by passing the `--template` flag.
+
+```bash
+# npm 6.x
+npm create lint-config@latest --template vue
+# npm 7+, extra double-dash is needed:
+npm create lint-config@latest -- --template vue
+```
+
+More templates can be found in the [template folder](https://github.com/liruifengv/create-lint-config/tree/main/template).
+
+You can also submit your own templates via [PR](https://github.com/liruifengv/create-lint-config/pulls).
+
+Template in plan
+- [x] vue
+- [ ] vue-ts
+- [ ] react
+- [ ] react-ts
+- [ ] node
+- [ ] node-ts
+- [ ] astro
+- [ ] svelte
+- [ ] solidjs
+- [ ] and more
 ## Features
 
 - [x] Generate eslint config.
@@ -61,12 +87,9 @@ npm create lint-config@latest -- -i
 | Name                | Description                                   |
 | :------------------ | :-------------------------------------------- |
 | `--help` (`-h`)     | Help info                                     |
-| `--template <name>` | Coming soon                                   |
+| `--template <name>` | Use template                                   |
 | `--input` (`-i`)    | Use prompt step by step to config your wanted |
 
-## TODO
-
-- Support for selecting templates by passing `-- template` flag.
 
 ## ISSUE
 

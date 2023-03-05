@@ -47,6 +47,32 @@ npm create lint-config@latest -- -i
 
 ![screenshot-i](screenshot-i.png)
 
+## 3. 使用 `--template` 标志
+
+你可以通过传递`--template`标志来使用模板。
+
+```bash
+# npm 6.x
+npm create lint-config@latest --template vue
+# npm 7+, 需要传递额外的双破折号。
+npm create lint-config@latest -- --template vue
+```
+更多模板见[template 文件夹](https://github.com/liruifengv/create-lint-config/tree/main/template)。
+
+你也可以通过 [PR](https://github.com/liruifengv/create-lint-config/pulls) 来提交你自己的模板。
+
+未来计划支持
+- [x] vue
+- [ ] vue-ts
+- [ ] react
+- [ ] react-ts
+- [ ] node
+- [ ] node-ts
+- [ ] astro
+- [ ] svelte
+- [ ] solidjs
+- [ ] and more
+
 ## 功能
 
 - [x] 生成 Eslint 配置。
@@ -61,12 +87,8 @@ npm create lint-config@latest -- -i
 | Name                | Description                        |
 | :------------------ | :--------------------------------- |
 | `--help` (`-h`)     | 提供帮助信息                       |
-| `--template <name>` | 马上到来                           |
+| `--template <name>` |          使用模板                  |
 | `--input` (`-i`)    | 使用提示一步一步地配置你想要的东西 |
-
-## TODO
-
-- 支持通过`--template`标志来选择模板。
 
 ## 遇到问题？
 
