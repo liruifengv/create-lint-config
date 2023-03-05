@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 import * as fs from 'node:fs'
+import * as path from 'node:path'
 import { copy } from './copyTemplate'
 import { color, label } from '@astrojs/cli-kit'
-import { error, info, spinner, title } from './messages'
+import { error, spinner, title } from './messages'
 import {
   help,
   eslint,
@@ -19,7 +20,8 @@ import {
 
 async function init() {
   if (!fs.existsSync('./package.json')) {
-    throw new Error(color.red('✖') + ' package.json not found')
+    error('NOT FOUND', 'package.json is not found')
+    process.exit(1)
   }
   console.log(`Welcome to use ${label('create-lint-config!', color.bgGreen, color.black)}`)
 
@@ -32,12 +34,34 @@ async function init() {
     return
   }
 
+  console.log(title('Starting!'))
   if (ctx.template) {
-    info('TODO', 'Template is coming soon!')
+    const templateRoot = path.resolve(__dirname, '../template')
+    const template = path.resolve(templateRoot, ctx.template)
+    if (!fs.existsSync(template)) {
+      error('INVAILD TEMPLATE', 'template is invalid')
+      process.exit(1)
+    }
+    await spinner({
+      start: `template ${ctx.template} copying...`,
+      end: `Template ${ctx.template} copied`,
+      while: () => {
+        try {
+          copy(ctx.template)
+        } catch (e) {
+          error('error', e)
+          process.exit(1)
+        }
+      },
+    })
+    const steps = [husky, dependencies]
+    for (const step of steps) {
+      await step(ctx.input)
+    }
+    success()
     return
   }
 
-  console.log(title('Starting!'))
   if (ctx.input) {
     const steps = [eslint, prettier, commitlint, stylelint, husky, dependencies]
     for (const step of steps) {
