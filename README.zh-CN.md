@@ -57,11 +57,13 @@ npm create lint-config@latest --template vue
 # npm 7+, 需要传递额外的双破折号。
 npm create lint-config@latest -- --template vue
 ```
+
 更多模板见[template 文件夹](https://github.com/liruifengv/create-lint-config/tree/main/template)。
 
 你也可以通过 [PR](https://github.com/liruifengv/create-lint-config/pulls) 来提交你自己的模板。
 
 未来计划支持
+
 - [x] vue
 - [ ] vue-ts
 - [ ] react
@@ -87,7 +89,7 @@ npm create lint-config@latest -- --template vue
 | Name                | Description                        |
 | :------------------ | :--------------------------------- |
 | `--help` (`-h`)     | 提供帮助信息                       |
-| `--template <name>` |          使用模板                  |
+| `--template <name>` | 使用模板                           |
 | `--input` (`-i`)    | 使用提示一步一步地配置你想要的东西 |
 
 ## 遇到问题？

@@ -63,6 +63,7 @@ More templates can be found in the [template folder](https://github.com/liruifen
 You can also submit your own templates via [PR](https://github.com/liruifengv/create-lint-config/pulls).
 
 Template in plan
+
 - [x] vue
 - [ ] vue-ts
 - [ ] react
@@ -73,6 +74,7 @@ Template in plan
 - [ ] svelte
 - [ ] solidjs
 - [ ] and more
+
 ## Features
 
 - [x] Generate eslint config.
@@ -87,9 +89,8 @@ Template in plan
 | Name                | Description                                   |
 | :------------------ | :-------------------------------------------- |
 | `--help` (`-h`)     | Help info                                     |
-| `--template <name>` | Use template                                   |
+| `--template <name>` | Use template                                  |
 | `--input` (`-i`)    | Use prompt step by step to config your wanted |
-
 
 ## ISSUE
 
