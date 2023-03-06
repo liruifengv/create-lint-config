@@ -1,8 +1,8 @@
 {
   "scripts": {
     "prepare": "husky install",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
+    "format": "prettier --write .",
     "style": "stylelint \"**/*.(vue|scss|css|less)\" --fix"
   },
   "lint-staged": {
