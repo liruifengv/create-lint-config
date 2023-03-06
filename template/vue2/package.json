@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "vue-cli-service lint",
+    "format": "prettier --write src/",
+    "style": "stylelint \"**/*.(vue|scss|css|less)\" --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,tsx,vue}": [
+      "prettier --write"
+    ],
+    "*.{css,less,sass,vue}": "stylelint --allow-empty-input"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "@vue/cli-plugin-eslint": "^5.0.0",
+    "eslint": "^7.12.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^5.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "stylelint": "^14.15.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
+    "prettier": "^2.7.1",
+    "husky": "^7.0.4",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@rushstack/eslint-patch": "^1.2.0"
+  }
+}
