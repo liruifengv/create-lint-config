@@ -1,5 +1,11 @@
 # create-lint-config
 
+## 0.3.2
+
+### Patch Changes
+
+- bb4aa07: fix lint script
+
 ## 0.3.1
 
 ### Patch Changes
