@@ -1,5 +1,11 @@
 # create-lint-config
 
+## 0.4.1
+
+### Patch Changes
+
+- c22d0e3: fix: stylelint use .cjs
+
 ## 0.4.0
 
 ### Minor Changes
