@@ -67,8 +67,8 @@ Template in plan
 - [x] vue
 - [x] vue2
 - [ ] vue-ts
-- [ ] react
-- [ ] react-ts
+- [x] react
+- [x] react-ts
 - [ ] node
 - [ ] node-ts
 - [ ] astro
