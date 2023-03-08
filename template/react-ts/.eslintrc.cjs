@@ -3,13 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'standard',
-    'prettier',
-    'standard-with-typescript',
-  ],
+  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'standard', 'prettier'],
   overrides: [],
   parserOptions: {
     ecmaFeatures: {
