@@ -67,6 +67,7 @@ npm create lint-config@latest -- --template vue
 未来计划支持
 
 - [x] vue
+- [x] vue2
 - [ ] vue-ts
 - [ ] react
 - [ ] react-ts
