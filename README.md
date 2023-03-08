@@ -65,6 +65,7 @@ You can also submit your own templates via [PR](https://github.com/liruifengv/cr
 Template in plan
 
 - [x] vue
+- [x] vue2
 - [ ] vue-ts
 - [ ] react
 - [ ] react-ts
