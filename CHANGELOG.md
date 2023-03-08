@@ -1,5 +1,17 @@
 # create-lint-config
 
+## 0.4.0
+
+### Minor Changes
+
+- 3c72f08: add common templates
+
+### Patch Changes
+
+- 618dffe: add node template
+- bd3c077: add react-ts template
+- be1ee68: add react template
+
 ## 0.3.3
 
 ### Patch Changes
