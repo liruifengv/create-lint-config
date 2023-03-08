@@ -1,7 +1,7 @@
 {
   "scripts": {
     "prepare": "husky install",
-    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs --fix",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx,.cjs,.mjs --fix",
     "format": "prettier --write .",
     "style": "stylelint \"**/*.(scss|css|less)\" --fix"
   },
@@ -26,6 +26,7 @@
     "stylelint": "^14.15.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^26.0.0",
     "stylelint-order": "^5.0.0",
     "prettier": "^2.7.1",
     "husky": "^7.0.4",
