@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.cjs,.mjs --fix",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.52.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "prettier": "^2.7.1",
+    "husky": "^7.0.4",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4"
+  }
+}

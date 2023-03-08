@@ -71,8 +71,8 @@ npm create lint-config@latest -- --template vue
 - [ ] vue-ts
 - [x] react
 - [x] react-ts
-- [ ] node
-- [ ] node-ts
+- [x] node
+- [x] node-ts
 - [ ] astro
 - [ ] svelte
 - [ ] solidjs

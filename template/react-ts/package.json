@@ -12,6 +12,7 @@
     "*.{css,less,sass}": "stylelint --allow-empty-input"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.52.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "eslint": "^8.35.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
@@ -25,7 +26,6 @@
     "stylelint": "^14.15.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^26.0.0",
     "stylelint-order": "^5.0.0",
     "prettier": "^2.7.1",
     "husky": "^7.0.4",
