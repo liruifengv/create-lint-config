@@ -1,5 +1,11 @@
 # create-lint-config
 
+## 0.3.3
+
+### Patch Changes
+
+- a46b26a: template: add vue2 template
+
 ## 0.3.2
 
 ### Patch Changes
