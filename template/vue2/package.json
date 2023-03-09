@@ -29,8 +29,8 @@
     "stylelint-order": "^5.0.0",
     "prettier": "^2.7.1",
     "husky": "^7.0.4",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@rushstack/eslint-patch": "^1.2.0"
   }
 }
