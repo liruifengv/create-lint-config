@@ -1,5 +1,12 @@
 # create-lint-config
 
+## 0.4.2
+
+### Patch Changes
+
+- bd120cc: upgrade commitlint
+- bd120cc: rename .commitlintrc.cjs
+
 ## 0.4.1
 
 ### Patch Changes
